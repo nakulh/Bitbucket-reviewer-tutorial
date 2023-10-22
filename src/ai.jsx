@@ -69,7 +69,7 @@ const callOpenAI = async (prompt) => {
   
   // Get OpenAI API key
   export const getOpenAPIKey = () => {
-    return "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";
+    return "";
   }
   
   // Get OpenAI model
