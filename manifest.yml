@@ -1,0 +1,20 @@
+permissions:
+  scopes:
+    - read:repository:bitbucket
+    - read:pullrequest:bitbucket 
+    - write:pullrequest:bitbucket
+  external:
+    fetch:
+      backend:
+        - api.openai.com
+modules:
+  trigger:
+    - key: pr-reviewer-hello-world
+      function: main
+      events:
+        - avi:bitbucket:created:pullrequest-comment
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/fc1784a3-a7ef-4c49-9176-26f4a866d25f
