@@ -16,5 +16,13 @@ modules:
   function:
     - key: main
       handler: index.run
+    - key: consumer-function
+      handler: index.handler
+  consumer:
+    - key: queue-consumer
+      queue: aiEvents # Name of the queue for which this consumer will be invoked
+      resolver:
+        function: consumer-function
+        method: event-listener # resolver function to be called with payload
 app:
   id: ari:cloud:ecosystem::app/fc1784a3-a7ef-4c49-9176-26f4a866d25f

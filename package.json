@@ -14,6 +14,8 @@
   },
   "dependencies": {
     "@forge/api": "^2.19.3",
+    "@forge/events": "^0.8.20",
+    "@forge/resolver": "^1.5.19",
     "@forge/ui": "1.9.8"
   }
 }
